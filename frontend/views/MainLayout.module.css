@@ -61,7 +61,6 @@ vaadin-scroller[slot="drawer"] {
   vertical-align: middle;
   --_size: var(--lumo-icon-size-m);
 
-  mask-image: var(--mask-image);
   mask-repeat: var(--mask-repeat);
   mask-position: var(--mask-position);
 
@@ -71,7 +70,6 @@ vaadin-scroller[slot="drawer"] {
   display: inline-block;
   flex: none;
 
-  -webkit-mask-image: var(--mask-image);
   -webkit-mask-repeat: var(--mask-repeat);
   -webkit-mask-position: var(--mask-position);
 }

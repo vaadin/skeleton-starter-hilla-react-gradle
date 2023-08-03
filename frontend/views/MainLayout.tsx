@@ -40,7 +40,13 @@ export default function MenuOnLeftLayout() {
                 <Item key={path} selected={isActive}>
                   <span
                     className={css.navicon}
-                    style={{ '--mask-image': `url('line-awesome/svg/${icon}.svg')` } as any}
+                    style={
+                      {
+                        '--mask-image': `url('line-awesome/svg/${icon}.svg')`,
+                        'mask-image': 'var(--mask-image)',
+                        '-webkit-mask-image': 'var(--mask-image)'
+                      } as any
+                    }
                     aria-hidden="true"
                   ></span>
                   {title}
