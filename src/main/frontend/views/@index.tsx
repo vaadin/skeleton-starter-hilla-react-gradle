@@ -3,8 +3,15 @@ import { Notification } from '@vaadin/react-components/Notification.js';
 import { TextField } from '@vaadin/react-components/TextField.js';
 import { HelloReactEndpoint } from 'Frontend/generated/endpoints.js';
 import { useState } from 'react';
+import type { ViewConfig } from "@vaadin/hilla-file-router/types.js";
 
-export default function HelloReactView() {
+export const config: ViewConfig = {
+    menu: {
+        title: "Index React"
+    }
+};
+
+export default function Index() {
   const [name, setName] = useState('');
 
   return (
