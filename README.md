@@ -13,7 +13,7 @@ Then you can run the main method of `Application.java`.
 
 ## Deploying to Production
 
-To create a production build, call `gradlew -Philla.productionMode=true build` (Windows), or `./gradlew -Philla.productionMode=true build` (Mac & Linux).
+To create a production build, call `gradlew clean build -Pvaadin.productionMode` (Windows), or `./gradlew clean build -Pvaadin.productionMode` (Mac & Linux).
 This will build a JAR file with all the dependencies and front-end resources, ready to be deployed.
 The file can be found in the `build/libs/` folder after the build completes.
 
@@ -25,7 +25,7 @@ Once the JAR file is built, you can run it using:
 
 <table style="width:100%; text-align: left;">
   <tr><th>Directory</th><th>Description</th></tr>
-  <tr><td><code>frontend/</code></td><td>Client-side source directory</td></tr>
+  <tr><td><code>src/main/frontend/</code></td><td>Client-side source directory</td></tr>
   <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>index.html</code></td><td>HTML template</td></tr>
   <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;<code>index.ts</code></td><td>Frontend 
 entrypoint, bootstraps a React application</td></tr>
@@ -45,5 +45,5 @@ source directory, contains the server-side Java views</td></tr>
 ## Useful links
 
 - Read the documentation at [hilla.dev/docs](https://hilla.dev/docs/).
-- Ask questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/hilla) or join our [Discord channel](https://discord.gg/MYFq5RTbBn).
+- Ask questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/vaadin) or join our [Forum](https://vaadin.com/forum).
 - Report issues, create pull requests in [GitHub](https://github.com/vaadin/hilla).
