@@ -39,5 +39,17 @@ export const routes: readonly ViewRouteObject[] = [
   },
 ];
 
-const router = createBrowserRouter([...routes]);
+const router = createBrowserRouter([...routes],{
+  future: {
+    // eslint-disable-next-line camelcase
+    v7_fetcherPersist: true,
+    // eslint-disable-next-line camelcase
+    v7_normalizeFormMethod: true,
+    // eslint-disable-next-line camelcase
+    v7_partialHydration: true,
+    // eslint-disable-next-line camelcase
+    v7_relativeSplatPath: true,
+    // eslint-disable-next-line camelcase
+    v7_skipActionErrorRevalidation: true,
+},});
 export default router;
