@@ -2,7 +2,7 @@ package com.example.application.endpoints.helloreact;
 
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import com.vaadin.hilla.BrowserCallable;
-import com.vaadin.hilla.Nonnull;
+import org.jspecify.annotations.NonNull;
 
 @BrowserCallable
 @AnonymousAllowed
@@ -26,7 +26,7 @@ public class HelloEndpoint {
      * @param name that assumed to be nonnull
      * @return a nonnull greeting
      */
-    @Nonnull
+    @NonNull
     public String sayHello(String name) {
         if (name.isEmpty()) {
             return "Hello stranger";
