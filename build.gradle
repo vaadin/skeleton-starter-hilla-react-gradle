@@ -7,7 +7,7 @@ buildscript {
 }
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '4.0.0-M3'
+	id 'org.springframework.boot' version '4.0.0-RC2'
 	id 'io.spring.dependency-management' version '1.1.7'
 	id 'com.vaadin' version "$vaadinVersion"
 }
@@ -22,9 +22,12 @@ repositories {
 }
 
 dependencies {
-	implementation 'com.vaadin:vaadin-spring-boot-starter'
+    implementation('com.vaadin:vaadin-spring-boot-starter') {
+        exclude group: 'com.vaadin', module: 'vaadin-dev'
+    }
+    implementation 'com.vaadin:hilla-spring-boot-starter'
 	implementation 'org.parttio:line-awesome:1.1.0'
-	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    developmentOnly('org.springframework.boot:spring-boot-devtools', 'com.vaadin:vaadin-dev')
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
