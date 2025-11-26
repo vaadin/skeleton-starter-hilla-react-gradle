@@ -22,9 +22,7 @@ repositories {
 }
 
 dependencies {
-    implementation('com.vaadin:vaadin-spring-boot-starter') {
-        exclude group: 'com.vaadin', module: 'vaadin-dev'
-    }
+    implementation('com.vaadin:vaadin-spring-boot-starter')
     implementation 'com.vaadin:hilla-spring-boot-starter'
 	implementation 'org.parttio:line-awesome:1.1.0'
     developmentOnly('org.springframework.boot:spring-boot-devtools', 'com.vaadin:vaadin-dev')
